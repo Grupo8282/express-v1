@@ -9,10 +9,12 @@ ruta.get(
    '/user', controlador.getData
     
 )
-ruta.get(
+ruta.get( 
     '/', (req, res)=>{
         res.send('hola desde user.js')
     }
 )
+
+ruta.post(`/${path}`,controlador.insertData)
 
 module.exports = ruta
